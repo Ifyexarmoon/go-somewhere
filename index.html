@@ -12,6 +12,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header */
+.header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+form input[type="search"] {
+	background-color: var(--search-bg);
+	border: none;
+	box-sizing: border-box;
+	font-weight: bold;
+	font: inherit;
+	margin-left: 12px;
+	width: 95%;
+	color: var(--yellow);
+	transition: all 0.2s;
+}	
+
 /* Float four columns side by side */
 .column {
   float: left;
@@ -49,7 +72,7 @@ body {
 
  /* link */
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -60,23 +83,46 @@ a:hover {
 
 
 @media (prefers-color-scheme: dark){
-    body {
-        color: #ffffff;
-        background-color: #1C1B22;
-    }
-    .card {
-        background-color: #2B2A33;
-    }
+  body {
+      color: #ffffff;
+      background-color: #1C1B22;
+  }
+  .card {
+      background-color: #2B2A33;
+  }
+
+  /* link */
+  a {
+    color: white;
+  }
+  /* Header */
+  .header {
+    background: #2B2A33;
+  }
 }
+
 
 
 </style>
 </head>
 <body>
 
-<h2>Hello, Moon</h2>
-<p>Go Somewhere!</p>
-
+<div class="header">
+  <h2>Hello, Moon</h2>
+  <p>Go Somewhere!</p>
+		<!-- Web search -->
+    <div id="web_search">
+      <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+        <label for="q">></label>
+        <input autofocus
+                 id="q"
+                 name="q"
+                 type="search"
+                 placeholder="search with duckduckgo...">
+      </form>
+    </div>
+</div>
+ 
 <div class="row">
   <div class="column">
     <div class="card">
