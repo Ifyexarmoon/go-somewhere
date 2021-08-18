@@ -20,7 +20,7 @@ body {
   text-align: center;
   background: #f1f1f1;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .title {
@@ -29,14 +29,14 @@ body {
 }
 
 form input[type="search"] {
-	background-color: var(--search-bg);
+	background-color: inherit;
 	border: none;
 	box-sizing: border-box;
 	font-weight: bold;
 	font: inherit;
 	margin-left: 12px;
 	width: 90%;
-	color: var(--yellow);
+	color: inherit;
 	transition: all 0.2s;
 }	
 
@@ -107,7 +107,6 @@ a:hover {
 }
 
 
-
 </style>
 </head>
 <body>
@@ -117,7 +116,6 @@ a:hover {
   <!-- Web search -->
     <div id="web_search">
       <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
-        <label for="q">></label>
         <input autofocus
                  id="q"
                  name="q"
