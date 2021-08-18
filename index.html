@@ -23,6 +23,11 @@ body {
   margin-bottom: 20px;
 }
 
+.title {
+	font-weight: bold;
+	font-style: italic;
+}
+
 form input[type="search"] {
 	background-color: var(--search-bg);
 	border: none;
@@ -30,7 +35,7 @@ form input[type="search"] {
 	font-weight: bold;
 	font: inherit;
 	margin-left: 12px;
-	width: 95%;
+	width: 90%;
 	color: var(--yellow);
 	transition: all 0.2s;
 }	
@@ -108,9 +113,8 @@ a:hover {
 <body>
 
 <div class="header">
-  <h2>Hello, Moon</h2>
-  <p>Go Somewhere!</p>
-		<!-- Web search -->
+  <h1 class="title">Hello, Moon</h1>
+  <!-- Web search -->
     <div id="web_search">
       <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
         <label for="q">></label>
