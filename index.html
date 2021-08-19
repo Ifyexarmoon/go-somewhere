@@ -19,7 +19,7 @@ body {
   font-size: 15px;
   text-align: center;
   background: #f1f1f1;
-  border-radius: 15px;
+  border-radius: 8px;
   margin: 5px;
   margin-bottom: 20px;
   margin-top: 20vh;
@@ -57,6 +57,11 @@ form input[type="search"] {
   clear: both;
 }
 
+.image {
+	max-height: 159.101px;
+	border-radius: 8px;
+}
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .header {
@@ -67,6 +72,13 @@ form input[type="search"] {
     display: block;
     margin-bottom: 20px;
   }
+  
+  .card_name {
+    display: none;
+  }
+  .last_column {
+    display: none;
+  }
 }
 
 /* Style the counter cards */
@@ -75,7 +87,7 @@ form input[type="search"] {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
  /* link */
@@ -131,7 +143,7 @@ a:hover {
 <div class="row">
   <div class="column">
     <div class="card">
-      <h3>anime</h3>
+      <h3 class="card_name">anime</h3>
       <p><a href="https://anilist.co/home">AniList</a></p>
       <p><a href="https://beta.crunchyroll.com/watchlist">Crunchyroll</a></p>
       <p><a href="https://mangadex.org/titles/follows">Mangadex</a></p>
@@ -140,16 +152,7 @@ a:hover {
 
   <div class="column">
     <div class="card">
-      <h3>media</h3>
-      <p><a href="https://www.netflix.com/browse">Netflix</a></p>
-      <p><a href="https://www.hulu.com/my-stuff">Hulu</a></p>
-      <p><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></p>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3>school</h3>
+      <h3 class="card_name">school</h3>
       <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
       <p><a href="https://ps.seattleschools.org/guardian/home.html">The Source</a></p>
       <p><a href="https://garfieldhs.seattleschools.org/">Garfield HS</a></p>
@@ -157,12 +160,17 @@ a:hover {
   </div>
   
   <div class="column">
-    <div class="card">
-      <h3>others</h3>
+    <div class="card" class>
+      <h3 class="card_name">others</h3>
       <p><a href="https://www.theverge.com/">The Verge</a></p>
       <p><a href="https://fast.com/">Fast</a></p>
       <p><a href="https://gitlab.com/">GitLab</a></p>
     </div>
+  </div>
+  
+  <div class="column last_column">
+    <div class="card">
+      <img id=leftImg src="assets/img/Echidna.png" class="image"></div>
   </div>
 </div>
 
