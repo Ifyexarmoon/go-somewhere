@@ -1,3 +1,3 @@
-go somewhere is a custom new tab page I made for myself. It is responsive to screen size and has dark and light mode support. It is available [here] (https://ifyexarmoon.github.io/go-somewhere/). Feel free to use it or make your own based on it, I would appreciate if I was credited though.
+go somewhere is a custom new tab page I made for myself. It is responsive to screen size and has dark and light mode support. It is available [here](https://ifyexarmoon.github.io/go-somewhere/). Feel free to use it or make your own based on it, I would appreciate if I was credited though.
 Here is an image of how it looks on the ipad in dark mode. (links may be outdated)
 ![Image of page](https://cdn.discordapp.com/attachments/855716835105177634/905188953794170970/IMG_0068.png)
