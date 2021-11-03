@@ -1,188 +1,188 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>~</title>
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>~</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width:1024px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-/* Header */
-.header {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  font-size: 15px;
-  text-align: center;
-  background: #f1f1f1;
-  border-radius: 8px;
-  margin: 10px;
-  margin-bottom: 20px;
-  margin-top: 20vh;
-}
+    /* Header */
+    .header {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      font-size: 15px;
+      text-align: center;
+      background: #f1f1f1;
+      border-radius: 8px;
+      margin: 10px;
+      margin-bottom: 20px;
+      margin-top: 20vh;
+    }
 
-.title {
-	font-weight: bold;
-	font-style: italic;
-}
+    .title {
+      font-weight: bold;
+      font-style: italic;
+    }
 
-form input[type="search"] {
-	background-color: inherit;
-	border: none;
-	box-sizing: border-box;
-	font-weight: bold;
-	font: inherit;
-	width: 90%;
-	color: inherit;
-  outline: none;
-  border: none;
-}	
+    form input[type="search"] {
+      background-color: inherit;
+      border: none;
+      box-sizing: border-box;
+      font-weight: bold;
+      font: inherit;
+      width: 90%;
+      color: inherit;
+      outline: none;
+      border: none;
+    }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+    }
 
-/* Remove extra left and right margins, due to padding */
-/*.row {margin: 0 -5px;}*/
+    /* Remove extra left and right margins, due to padding */
+    /*.row {margin: 0 -5px;}*/
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .header {
-    display: none;
-  }
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  
-  .card_name {
-    display: none;
-  }
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .header {
+        display: none;
+      }
 
-  .last_column {
-    display: none;
-  }
-}
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
 
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-}
+      .card_name {
+        display: none;
+      }
 
- /* link */
-a {
-  color: black;
-  text-decoration: none;
-}
+      .last_column {
+        display: none;
+      }
+    }
 
-/* mouse over link */
-a:hover {
-  color: grey;
-}
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+    }
 
+    /* link */
+    a {
+      color: black;
+      text-decoration: none;
+    }
 
-@media (prefers-color-scheme: dark){
-  body {
-      color: #EBDBB2;
-      background-color: #3C3836;
-  }
-  .card {
-      background-color: #282828;
-  }
-
-  /* link */
-  a {
-    color: #8EC07C;
-  }
-  a:hover {
-    color: #83A598;
-  }
-  
-  /* Header */
-  .header {
-    background: #282828;
-  }
-}
+    /* mouse over link */
+    a:hover {
+      color: grey;
+    }
 
 
-</style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #EBDBB2;
+        background-color: #3C3836;
+      }
+
+      .card {
+        background-color: #282828;
+      }
+
+      /* link */
+      a {
+        color: #8EC07C;
+      }
+
+      a:hover {
+        color: #83A598;
+      }
+
+      /* Header */
+      .header {
+        background: #282828;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="header">
-  <h2 class="title">Hello, Moon</h2>
-  <!-- Web search -->
+  <div class="header">
+    <h2 class="title">Hello, Moon</h2>
+    <!-- Web search -->
     <div id="web_search">
       <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
-        <input autofocus
-                 id="q"
-                 name="q"
-                 type="search"
-                 placeholder="go somewhere!">
+        <input autofocus id="q" name="q" type="search" placeholder="go somewhere!">
       </form>
     </div>
-</div>
- 
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3 class="card_name">anime</h3>
-      <p><a href="https://beta.crunchyroll.com/watchlist">Crunchyroll</a></p>
-      <p><a href="https://www.funimation.com/">Funimation</a></p>
-      <p><a href="https://trace.moe/">trace.moe</a></p>
-    </div>
   </div>
 
-  <div class="column">
-    <div class="card">
-      <h3 class="card_name">school</h3>
-      <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
-      <p><a href="https://ps.seattleschools.org/guardian/home.html">The Source</a></p>
-      <p><a href="https://apstudents.collegeboard.org/">College Board</a></p>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <h3 class="card_name">anime</h3>
+        <p><a href="https://beta.crunchyroll.com/watchlist">Crunchyroll</a></p>
+        <p><a href="https://www.funimation.com/">Funimation</a></p>
+        <p><a href="https://trace.moe/">trace.moe</a></p>
+      </div>
     </div>
-  </div>
-  
-  <div class="column">
-    <div class="card" class>
-      <h3 class="card_name">others</h3>
-      <p><a href="https://www.theverge.com/">The Verge</a></p>
-      <p><a href="https://fast.com/">Fast</a></p>
-      <p><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></p>
+
+    <div class="column">
+      <div class="card">
+        <h3 class="card_name">school</h3>
+        <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
+        <p><a href="https://ps.seattleschools.org/guardian/home.html">The Source</a></p>
+        <p><a href="https://apstudents.collegeboard.org/">College Board</a></p>
+      </div>
     </div>
-  </div>
-  
-  <div class="column last_column">
-    
-    <div class="card">
-      <h3 class="card_name">others 2</h3>
-      <p><a href="https://github.com/Ifyexarmoon">GitHub</a></p>
-      <p><a href="https://www.ultimate-guitar.com/">Guitar Tabs</a></p>
-      <p><a href="https://lyricstranslate.com/">Lyrics Translate</a></p>
-  </div>
-</div>
+
+    <div class="column">
+      <div class="card" class>
+        <h3 class="card_name">others</h3>
+        <p><a href="https://www.theverge.com/">The Verge</a></p>
+        <p><a href="https://fast.com/">Fast</a></p>
+        <p><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></p>
+      </div>
+    </div>
+
+    <div class="column last_column">
+
+      <div class="card">
+        <h3 class="card_name">others 2</h3>
+        <p><a href="https://github.com/Ifyexarmoon">GitHub</a></p>
+        <p><a href="https://www.ultimate-guitar.com/">Guitar Tabs</a></p>
+        <p><a href="https://lyricstranslate.com/">Lyrics Translate</a></p>
+      </div>
+    </div>
 
 </body>
+
 </html>
