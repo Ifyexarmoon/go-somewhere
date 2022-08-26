@@ -14,19 +14,16 @@
       max-width: 1024px;
       margin-left: auto;
       margin-right: auto;
+      color: darkslategray;
+      background: lightblue;
     }
 
     /* Header */
     .header {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      padding: 16px;
-      font-size: 15px;
+      font-size: 16px;
       text-align: center;
-      background: #f1f1f1;
-      border-radius: 8px;
-      margin: 10px;
-      margin-bottom: 20px;
-      margin-top: 20vh;
+      margin-bottom: 40px;
+      margin-top: 25vh;
     }
 
     .title {
@@ -34,23 +31,11 @@
       font-style: italic;
     }
 
-    form input[type="search"] {
-      background-color: inherit;
-      border: none;
-      box-sizing: border-box;
-      font-weight: bold;
-      font: inherit;
-      width: 90%;
-      color: inherit;
-      outline: none;
-      border: none;
-    }
-
     /* Float four columns side by side */
     .column {
       float: left;
       width: 25%;
-      padding: 0 10px;
+      padding: 10px;
     }
 
     /* Remove extra left and right margins, due to padding */
@@ -64,16 +49,16 @@
     }
 
     /* Responsive columns */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       .header {
-        display: none;
+        margin: 20px;
       }
 
       .column {
-        width: 100%;
+        width: 80%;
         display: block;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
       }
 
       .card_name {
@@ -86,19 +71,19 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       padding: 16px;
       text-align: center;
-      background-color: #f1f1f1;
+      background-color: white;
       border-radius: 8px;
     }
 
     /* link */
     a {
-      color: black;
+      color: green;
       text-decoration: none;
     }
 
     /* mouse over link */
     a:hover {
-      color: grey;
+      color: lightgreen;
     }
 
 
@@ -120,34 +105,21 @@
       a:hover {
         color: #83A598;
       }
-
-      /* Header */
-      .header {
-        background: #282828;
-      }
     }
   </style>
 </head>
 
 <body>
-
   <div class="header">
     <h2 class="title">go-somewhere</h2>
-    <!-- Web search -->
-    <div id="web_search">
-      <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
-        <input autofocus id="q" name="q" type="search" placeholder="type here!">
-      </form>
-    </div>
   </div>
-
   <div class="row">
     <div class="column">
       <div class="card">
         <h3 class="card_name">anime</h3>
+        <p><a href="https://anilist.co/home/">Anilist</a></p>
         <p><a href="https://beta.crunchyroll.com/watchlist">Crunchyroll</a></p>
-        <p><a href="https://www.funimation.com/">Funimation</a></p>
-        <p><a href="https://www.reddit.com/r/anime/wiki/watch_order">Watch&nbsp;Orders</a></p>
+        <p><a href="https://www.reddit.com/r/anime/wiki/watch_order">Watch Orders</a></p>
       </div>
     </div>
 
@@ -155,8 +127,8 @@
       <div class="card">
         <h3 class="card_name">school</h3>
         <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
-        <p><a href="https://ps.seattleschools.org/guardian/home.html">The&nbsp;Source</a></p>
-        <p><a href="https://apstudents.collegeboard.org/">College&nbsp;Board</a></p>
+        <p><a href="https://ps.seattleschools.org/guardian/home.html">The Source</a></p>
+        <p><a href="https://www.collegeboard.org/">College Board</a></p>
       </div>
     </div>
 
@@ -164,17 +136,17 @@
       <div class="card" class>
         <h3 class="card_name">japanese</h3>
         <p><a href="https://www.duolingo.com/learn">Duolingo</a></p>
-        <p><a href="https://jisho.org/">Jisho&nbsp;Dictionary</a></p>
-        <p><a href="https://translate.google.com/">Google&nbsp;Translate</a></p>
+        <p><a href="https://jisho.org/">Jisho Dictionary</a></p>
+        <p><a href="https://translate.google.com/">Google Translate</a></p>
       </div>
     </div>
 
     <div class="column">
       <div class="card">
         <h3 class="card_name">others</h3>
-        <p><a href="https://github.com/Ifyexarmoon">GitHub</a></p>
-        <p><a href="https://fast.com/">Fast</a></p>
+        <p><a href="https://mail.google.com">Gmail</a></p>
         <p><a href="https://www.youtube.com/feed/subscriptions">YouTube</a></p>
+        <p><a href="https://github.com/Ifyexarmoon/go-somewhere/tree/new-ideas">This Project</a></p>
       </div>
     </div>
   </div>
