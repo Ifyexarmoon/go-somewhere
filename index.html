@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-16be" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>~</title>
 <style>
@@ -80,6 +81,20 @@
 	  color: lightgreen;
 	}
 
+	.bottom {
+		font-size: 10px;
+		position: fixed;
+		bottom: 0px;
+		right: 10px;
+	}
+	
+	.credits {
+		display: block;
+	}
+	.creditsdark {
+		display: none;
+	}
+
 	/* Responsive columns */
 	@media screen and (max-width: 800px) {
 	  .header {
@@ -117,6 +132,13 @@
 	  #card1 {
 		  background-image: url(IMG_3482.JPG);
 	  }
+	  .credits {
+		  display: none;
+	  }
+	  .creditsdark {
+		  display: block;
+	  }
+	
 	  /* link */
 	  a {
 		color: #8EC07C;
@@ -188,4 +210,14 @@
     </div>
   </div>
 </body>
+<div class="bottom">
+	<p class="credits">
+		<a href="https://www.pixiv.net/en/artworks/90132695">Art by ばん　on Pixiv</a>
+	</p>
+</div>
+<div class="bottom">
+	<p class="creditsdark">
+	  	<a id="dark" href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a>
+	</p>
+</div>
 </html>
