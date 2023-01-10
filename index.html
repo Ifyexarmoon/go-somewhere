@@ -6,39 +6,39 @@
     <title>~</title>
     <style>
       * {
-        box-sizing: border-box;
+      box-sizing: border-box;
       }
 
       body {
-        font-family: Monospace;
-        font-size: 16px;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        color: darkslategray;
-        background: lightblue;
-        padding-left: 3vw;
-        padding-right: 3vw;
+      font-family: Monospace;
+      font-size: 16px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      color: darkslategray;
+      background: lightblue;
+      padding-left: 3vw;
+      padding-right: 3vw;
       }
 
 
-         /* Header */
-         .header {
-           font-size: 20px;
-           text-align: center;
-           margin-bottom: 40px;
-           margin-top: 20vh;
-         }
+      /* Header */
+      .header {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: 20vh;
+      }
 
-         .title {
-           font-weight: bold;
-           font-style: italic;
-         }
+      .title {
+      font-weight: bold;
+      font-style: italic;
+      }
 
       /* Float four columns side by side */
       .column {
-        float: left;
-        width: 20%;
+      float: left;
+      width: 20%;
       }
 
       /* Remove extra left and right margins, due to padding
@@ -46,109 +46,108 @@
 
       /* Clear floats after the columns */
       .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
       }
 
       /* Style the counter cards */
       .card {
-        padding: 16px;
-        /* padding-bottom: 40px; */
-        text-align: center;
-        background-color: #f1f1f1;
-        /*border: 1px white solid;*/
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+      /*border: 1px white solid;*/
       }
 
       #card1 {
-      	background-image: url(IMG_3483.JPG);
-      	background-repeat: no-repeat;
-      	background-size: 100%; //propotional resize;
-      	/*background-color: #fff;*/
+      background-image: url(IMG_3483.JPG);
+      background-repeat: no-repeat;
+      background-size: 100%; //propotional resize;
+      /*background-color: #fff;*/
       }
 
       /* link */
       a {
-        color: green;
-        text-decoration: none;
+      color: green;
+      text-decoration: none;
       }
       /* mouse over link */
       a:hover {
-        color: lightgreen;
+      color: lightgreen;
       }
 
       .bottom {
-      	font-size: 10px;
-      	position: fixed;
-      	bottom: 0px;
-      	right: 10px;
+      font-size: 10px;
+      position: fixed;
+      bottom: 0px;
+      right: 10px;
       }
 
       .credits {
-      	display: block;
+      display: block;
       }
       .creditsdark {
-      	display: none;
+      display: none;
       }
 
       @media (prefers-color-scheme: dark) {
-        body {
-      	color: #EBDBB2;
-      	background-color: #3C3836;
-        }
+      body {
+      color: #EBDBB2;
+      background-color: #3C3836;
+      }
 
-        .card {
-      	background-color: #282828;
-        }
-        #card1 {
-      	  background-image: url(IMG_3482.JPG);
-        }
-        .credits {
-      	  display: none;
-        }
-        .creditsdark {
-      	  display: block;
-        }
+      .card {
+      background-color: #282828;
+      }
+      #card1 {
+      background-image: url(IMG_3482.JPG);
+      }
+      .credits {
+      display: none;
+      }
+      .creditsdark {
+      display: block;
+      }
 
-        /* link */
-        a {
-      	color: #8EC07C;
-        }
+      /* link */
+      a {
+      color: #8EC07C;
+      }
 
-        a:hover {
-      	color: #83A598;
-        }
+      a:hover {
+      color: #83A598;
+      }
       }
 
       /* Responsive columns */
-      @media screen and (max-width: 700px) {
-        .header {
-        	margin: 0px;
-        }
-        .column {
-      	width: 80%;
-      	display: block;
-           	padding: 15px;
-      	margin-left: 10%;
-             margin-right: 10%;
-        }
-        .card {
-           	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-         	padding: 16px;
-           	border-radius: 16px;
-           }
-        .card_name {
-        	padding: 0px;
-        }
-        #column1 {
-        	display: none
-        }
-        .credits {
-      	  display: none;
-        }
-        .creditsdark {
-      	  display: none;
-        }
+      @media screen and (max-width: 800px) {
+      .header {
+      margin: 0px;
+      }
+      .column {
+      width: 80%;
+      display: block;
+      padding: 15px;
+      margin-left: 10%;
+      margin-right: 10%;
+      }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      border-radius: 16px;
+      }
+      .card_name {
+      padding: 0px;
+      }
+      #column1 {
+      display: none
+      }
+      .credits {
+      display: none;
+      }
+      .creditsdark {
+      display: none;
+      }
       }
     </style>
   </head>
