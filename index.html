@@ -2,219 +2,221 @@
 <html>
 
 <head>
-  <meta charset="utf-16be" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>~</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="utf-16be" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>~</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Monospace;
-      font-size: 16px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #3B4252;
-      background: #88C0D0;
-      overflow-x:hidden !important;
-    }
+        body {
+            font-family: Monospace;
+            font-size: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #3B4252;
+            background: #8FBCBB;
+            overflow-x: hidden !important;
+        }
 
-    .title {
-      text-align: center;
-      margin-top: 20vh;
-      font-style: italic;
-    }
+        .title {
+            text-align: center;
+            margin-top: 20vh;
+            font-style: italic;
+        }
 
-    /* Float four columns side by side */
-    .column {
-      float: left;
-      width: 20%;
-    }
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 20%;
+        }
 
-    /* Remove extra left and right margins, due to padding */
-	.row {margin: 0 -5px;} 
+        /* Remove extra left and right margins, due to padding */
+        .row {
+            margin: 0 -5px;
+        }
 
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    } 
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-    /* Style the column cards */
-    .card {
-      padding: 16px;
-      text-align: center;
-      background-color: #E5E9F0;
-    }
+        /* Style the column cards */
+        .card {
+            padding: 16px;
+            text-align: center;
+            background-color: #ECEFF4;
+        }
 
-    #card1 {
-      background-image: url(IMG_3483.JPG);
-      background-repeat: no-repeat;
-      background-size: 100%; //propotional resize;
-      /*background-color: #fff;*/
-    }
+        #card1 {
+            background-image: url(IMG_3483.JPG);
+            background-repeat: no-repeat;
+            background-size: 100%; //propotional resize;
+            /*background-color: #fff;*/
+        }
 
-    /* link */
-    a {
-      color: #5E81AC;
-      text-decoration: none;
-    }
+        /* link */
+        a {
+            color: #5E81AC;
+            text-decoration: none;
+        }
 
-    /* mouse over link */
-    a:hover {
-      color: #81A1C1;
-    }
-    
-    .bottom {
-      font-size: 10px;
-      position: fixed;
-      bottom: 0px;
-      right: 10px;
-    }
+        /* mouse over link */
+        a:hover {
+            color: #81A1C1;
+        }
 
-    .credits {
-      display: block;
-    }
+        .bottom {
+            font-size: 10px;
+            position: fixed;
+            bottom: 0px;
+            right: 10px;
+        }
 
-    .creditsdark {
-      display: none;
-    }
-    
+        .credits {
+            display: block;
+        }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        color: #ECEFF4;
-        background-color: #2E3440;
-      }
-
-      .card {
-        background-color: #3B4252;
-      }
-
-      #card1 {
-        background-image: url(IMG_3482.JPG);
-      }
-
-      .credits {
-        display: none;
-      }
-
-      .creditsdark {
-        display: block;
-      }
-
-      /* link */
-      a {
-        color: #88C0D0;
-      }
-
-      a:hover {
-        color: #8FBCBB;
-      }
-    }
+        .creditsdark {
+            display: none;
+        }
 
 
-    @media screen and (max-width: 800px) {
-      .title {
-        margin: 0px;
-      }
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ECEFF4;
+                background-color: #2E3440;
+            }
 
-      .column {
-        width: 80%;
-        display: block;
-        padding: 15px;
-        margin-left: 10%;
-        margin-right: 10%;
-      }
+            .card {
+                background-color: #3B4252;
+            }
 
-      .card {
-        border-radius: 16px;
-        padding: 16px;
-      }
+            #card1 {
+                background-image: url(IMG_3482.JPG);
+            }
 
-      #column1 {
-        display: none
-      }
+            .credits {
+                display: none;
+            }
 
-      .credits {
-        display: none;
-      }
+            .creditsdark {
+                display: block;
+            }
 
-      .creditsdark {
-        display: none;
-      }
-    }
-  </style>
+            /* link */
+            a {
+                color: #88C0D0;
+            }
+
+            a:hover {
+                color: #8FBCBB;
+            }
+        }
+
+
+        @media screen and (max-width: 800px) {
+            .title {
+                margin: 0px;
+            }
+
+            .column {
+                width: 80%;
+                display: block;
+                padding: 15px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            .card {
+                border-radius: 16px;
+                padding: 16px;
+            }
+
+            #column1 {
+                display: none
+            }
+
+            .credits {
+                display: none;
+            }
+
+            .creditsdark {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<h2 class="title">go-somewhere</h2>
-  <div class="row">
-    <div class="column" id="column1">
-      <div class="card" id="card1">
-        <h3>&nbsp;</h3>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </div>
+    <h2 class="title">go-somewhere</h2>
+    <div class="row">
+        <div class="column" id="column1">
+            <div class="card" id="card1">
+                <h3>&nbsp;</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>social</h3>
+                <p><a href="https://elk.zone/home">Elk</a></p>
+                <p><a href="https://discord.com/channels/@me">Discord</a></p>
+                <p><a href="https://www.instagram.com/">Instagram</a></p>
+                <p><a href="https://www.tumblr.com/dashboard">Tumblr</a></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card" class>
+                <h3>media</h3>
+                <p><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></p>
+                <p><a href="https://www.crunchyroll.com/watchlist">Crunchyroll</a></p>
+                <p><a href="https://myanimelist.net/animelist/Ifyexarmoon">MyAnimeList</a></p>
+                <p><a href="https://www.wikipedia.org/">Wikipedia</a></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>school</h3>
+                <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
+                <p><a href="https://ps.seattleschools.org/guardian/home.html">The&nbsp;Source</a></p>
+                <p><a href="https://www.collegeboard.org/">College&nbsp;Board</a></p>
+                <p><a href="https://www.office.com/">Microsoft&nbsp;365</a></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>tools</h3>
+                <p><a href="https://jisho.org/">Jisho</a></p>
+                <p><a href="https://www.desmos.com/calculator">Desmos</a></p>
+                <p><a href="https://www.easybib.com/folders">EasyBib</a></p>
+                <p><a href="https://github.com/Ifyexarmoon/go-somewhere">Github</a></p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="column">
-      <div class="card">
-        <h3>social</h3>
-        <p><a href="https://elk.zone/home">Elk</a></p>
-        <p><a href="https://discord.com/channels/@me">Discord</a></p>
-        <p><a href="https://www.instagram.com/">Instagram</a></p>
-        <p><a href="https://www.tumblr.com/dashboard">Tumblr</a></p>
-      </div>
+    <div class="bottom">
+        <p class="credits">
+            <a href="https://www.pixiv.net/en/artworks/90132695">Art by ばん　on Pixiv</a>
+        </p>
     </div>
-
-    <div class="column">
-      <div class="card" class>
-        <h3>media</h3>
-        <p><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></p>
-        <p><a href="https://www.crunchyroll.com/watchlist">Crunchyroll</a></p>
-        <p><a href="https://myanimelist.net/animelist/Ifyexarmoon">MyAnimeList</a></p>
-        <p><a href="https://www.wikipedia.org/">Wikipedia</a></p>
-      </div>
+    <div class="bottom">
+        <p class="creditsdark">
+            <a id="dark" href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a>
+        </p>
     </div>
-
-    <div class="column">
-      <div class="card">
-        <h3>school</h3>
-        <p><a href="https://districtlms.seattleschools.org/home/course-dashboard">Schoology</a></p>
-        <p><a href="https://ps.seattleschools.org/guardian/home.html">The&nbsp;Source</a></p>
-        <p><a href="https://www.collegeboard.org/">College&nbsp;Board</a></p>
-        <p><a href="https://www.office.com/">Microsoft&nbsp;365</a></p>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <h3>tools</h3>
-        <p><a href="https://jisho.org/">Jisho</a></p>
-        <p><a href="https://www.desmos.com/calculator">Desmos</a></p>
-        <p><a href="https://www.easybib.com/folders">EasyBib</a></p>
-        <p><a href="https://github.com/Ifyexarmoon/go-somewhere">Github</a></p>
-      </div>
-    </div>
-    
-  </div>
-
-  <div class="bottom">
-    <p class="credits">
-      <a href="https://www.pixiv.net/en/artworks/90132695">Art by ばん　on Pixiv</a>
-    </p>
-  </div>
-  <div class="bottom">
-    <p class="creditsdark">
-      <a id="dark" href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a>
-    </p>
-  </div>
 </body>
 
-</html> 
+</html>
