@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-16be" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>~</title>
     <link href="https://fonts.cdnfonts.com/css/open-dyslexic" rel="stylesheet">
     <style>
@@ -13,51 +12,84 @@
 
         body {
             font-family: 'Open-Dyslexic', sans-serif;
-            font-size: 16px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
             color: #3B4252;
             background: #8FBCBB;
-            overflow-x: hidden !important;
         }
 
-        .title {
-            text-align: center;
-            margin-top: 20vh;
-            font-style: italic;
+        /*Center everything*/
+        html,
+        body,
+        .container {
+            height: 100%;
         }
 
-        /* Float four columns side by side */
-        .column {
-            float: left;
-            width: 25%;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Remove extra left and right margins, due to padding */
-        .row {
-            margin: 0 -5px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Style the column cards */
-        .card {
-            padding: 16px;
-            text-align: center;
+        /*Split between image and everything else*/
+        .main_window {
+            display: flex;
+            flex-direction: row;
             background-color: #ECEFF4;
+            padding: 20px;
         }
 
-        #card1 {
+        .image {
             background-image: url(IMG_3483.JPG);
             background-repeat: no-repeat;
             background-size: 100%; //propotional resize;
-            /*background-color: #fff;*/
+            min-width: 200px;
+        }
+
+        /*line up links horizontally*/
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            text-align: center;
+            min-width: 600px;
+        }
+
+        .flex-item-left {
+            padding: 10px;
+            flex: 50%;
+        }
+
+        .flex-item-right {
+            padding: 10px;
+            flex: 50%;
+        }
+
+        /*fix title alignment*/
+        .title {
+            padding-top: 15px;
+            padding-left: 40px;
+        }
+
+        /*Form based off of Vallode's work:
+		https://codepen.io/Vallode/pen/abdYLOd*/
+        form {
+            margin: 1em 0;
+            position: relative;
+        }
+
+        form input[type="search"] {
+            background-color: inherit;
+            border: none;
+            box-sizing: border-box;
+            font-weight: bold;
+            font: inherit;
+            margin-left: 12px;
+            width: 95%;
+            color: #A3BE8C;
+        }
+
+        form label {
+            position: absolute;
+            transition: all 0.4s;
         }
 
         /* link */
@@ -70,6 +102,7 @@
         a:hover {
             color: #81A1C1;
         }
+
 
         .footer {
             font-size: 12px;
@@ -85,12 +118,53 @@
             right: 10px;
         }
 
-        .credits {
-            display: block;
-        }
-
         .creditsdark {
             display: none;
+        }
+
+        /* Responsive layout - removes image */
+        @media (max-width: 800px) {
+            .image {
+                display: none;
+            }
+
+            .credits {
+                display: none;
+            }
+
+            .creditsdark {
+                display: none;
+            }
+        }
+
+        /* Responsive layout - makes a one column-layout instead of three-column layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                min-width: 200px;
+            }
+
+            .image {
+                display: none;
+            }
+
+            .title {
+                padding-top: 0px;
+                padding-left: 0px;
+                text-align: center;
+            }
+
+            form {
+                display: none;
+            }
+
+            .credits {
+                display: none;
+            }
+
+            .creditsdark {
+                display: none;
+            }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -99,12 +173,16 @@
                 background-color: #2E3440;
             }
 
-            .card {
+            .main_window {
                 color: #D08770;
                 background-color: #3B4252;
             }
 
-            #card1 {
+            .title {
+                color: #BF616A;
+            }
+
+            .image {
                 background-image: url(IMG_3482.JPG);
             }
 
@@ -125,81 +203,58 @@
                 color: #81A1C1;
             }
         }
-
-        @media screen and (max-width: 700px) {
-            body {
-                font-size: 18px;
-            }
-
-            .title {
-                margin: 20px;
-            }
-
-            .column {
-                width: 80%;
-                display: block;
-                padding: 15px;
-                margin-left: 10%;
-                margin-right: 10%;
-            }
-
-            .card {
-                border-radius: 16px;
-                padding: 16px;
-            }
-
-            #column1 {
-                display: none
-            }
-
-            .footer {
-                display: none;
-            }
-
-            .credits {
-                display: none;
-            }
-
-            .creditsdark {
-                display: none;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <h2 class="title">go-somewhere</h2>
-    <div class="row">
-        <div class="column" id="column1">
-            <div class="card" id="card1">
-                <h3>&nbsp;</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <h3>media</h3>
-                <p><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></p>
-                <p><a href="https://9animeto.io/user/continue-watching">9anime</a></p>
-                <p><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <h3>social</h3>
-                <p><a href="https://www.tumblr.com/dashboard">Tumblr</a></p>
-                <p><a href="https://raddle.me/">Raddle</a></p>
-                <p><a href="https://discord.com/channels/@me">Discord</a></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <h3>other</h3>
-                <p><a href="https://jisho.org/">Jisho</a></p>
-                <p><a href="https://www.wikipedia.org/">Wikipedia</a></p>
-                <p><a href="https://www.spl.org">Library</a></p>
+    <div class="container">
+        <div class="main_window">
+            <div class="image" class="flex-item-left"></div>
+            <div class="main_content">
+                <div class="title">
+                    <h2>go-somewhere</h2>
+                    <div id="date">
+                        <script type="text/javascript">
+                            function doDate() {
+                                var str = "";
+                                var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+                                var clock = new Date();
+                                var now = new Date();
+
+                                str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) + ":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+                                document.getElementById("date").innerHTML = str;
+                            }
+                            setInterval(doDate, 1000);
+                            doDate();
+                        </script>
+                    </div>
+                    <div id="web_search">
+                        <form action="https://duckduckgo.com/" method="GET" autocomplete="on">
+                            <label for="q">></label>
+                            <input autofocus id="q" name="q" type="search" placeholder=" search with duckduckgo...">
+                        </form>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-item-right">
+                        <h3>media</h3>
+                        <p><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></p>
+                        <p><a href="https://9animeto.io/user/continue-watching">9anime</a></p>
+                        <p><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></p>
+                    </div>
+                    <div class="flex-item-right">
+                        <h3>social</h3>
+                        <p><a href="https://www.tumblr.com/dashboard">Tumblr</a></p>
+                        <p><a href="https://raddle.me/">Raddle</a></p>
+                        <p><a href="https://discord.com/channels/@me">Discord</a></p>
+                    </div>
+                    <div class="flex-item-right">
+                        <h3>other</h3>
+                        <p><a href="https://jisho.org/">Jisho</a></p>
+                        <p><a href="https://www.wikipedia.org/">Wikipedia</a></p>
+                        <p><a href="https://www.spl.org">Library</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
