@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-16be" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>~</title>
     <link href="https://fonts.cdnfonts.com/css/open-dyslexic" rel="stylesheet">
     <style>
@@ -49,7 +50,7 @@
             flex-direction: row;
             font-size: 14px;
             text-align: center;
-            min-width: 600px;
+            min-width: 500px;
         }
 
         .flex-item-left {
@@ -68,29 +69,6 @@
             padding-left: 40px;
         }
 
-        /*Form based off of Vallode's work:
-		https://codepen.io/Vallode/pen/abdYLOd*/
-        form {
-            margin: 1em 0;
-            position: relative;
-        }
-
-        form input[type="search"] {
-            background-color: inherit;
-            border: none;
-            box-sizing: border-box;
-            font-weight: bold;
-            font: inherit;
-            margin-left: 12px;
-            width: 95%;
-            color: #A3BE8C;
-        }
-
-        form label {
-            position: absolute;
-            transition: all 0.4s;
-        }
-
         /* link */
         a {
             color: #5E81AC;
@@ -103,7 +81,7 @@
         }
 
 
-        .footer {
+        .source {
             font-size: 12px;
             position: fixed;
             bottom: 0;
@@ -117,12 +95,12 @@
             right: 10px;
         }
 
-        .creditsdark {
+        #dark {
             display: none;
         }
 
         /* Responsive layout - removes image */
-        @media (max-width: 800px) {
+        @media (max-width: 700px) {
             .image {
                 display: none;
             }
@@ -134,10 +112,11 @@
         }
 
         /* Responsive layout - makes a one column-layout instead of three-column layout */
-        @media (max-width: 600px) {
+        @media (max-width: 500px) {
             .flex-container {
                 flex-direction: column;
                 min-width: 200px;
+                font-size: 18px;
             }
 
             .image {
@@ -145,15 +124,13 @@
             }
 
             .title {
-                padding-top: 0px;
-                padding-left: 0px;
-                text-align: center;
-            }
-
-            form {
                 display: none;
             }
-
+            
+            .source {
+            	display: none;
+            }
+            
             .bottom {
                 display: none;
             }
@@ -178,14 +155,14 @@
                 background-image: url(IMG_3482.JPG);
             }
 
-            .credits {
+            #light {
                 display: none;
             }
-
-            .creditsdark {
-                display: block;
+            
+            #dark {
+            	display: block;
             }
-
+            
             /* link */
             a {
                 color: #EBCB8B;
@@ -220,12 +197,6 @@
                             doDate();
                         </script>
                     </div>
-                    <div id="web_search">
-                        <form action="https://duckduckgo.com/" method="GET" autocomplete="on">
-                            <label for="q">></label>
-                            <input autofocus id="q" name="q" type="search" placeholder=" search with duckduckgo...">
-                        </form>
-                    </div>
                 </div>
                 <div class="flex-container">
                     <div class="flex-item-right">
@@ -250,20 +221,12 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>
-            <a href="https://github.com/Ifyexarmoon/go-somewhere">Github Repo</a>
-        </p>
+    <div class="source">
+        <p><a href="https://github.com/Ifyexarmoon/go-somewhere">Github Repo</a></p>
     </div>
     <div class="bottom">
-        <p class="credits">
-            <a href="https://www.pixiv.net/en/artworks/90132695">Art by ばん　on Pixiv</a>
-        </p>
-    </div>
-    <div class="bottom">
-        <p class="creditsdark">
-            <a href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a>
-        </p>
+        <p id=light><a href="https://www.pixiv.net/en/artworks/90132695">Art by ばん　on Pixiv</a></p>
+        <p id="dark"><a href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a></p>
     </div>
 </body>
 
