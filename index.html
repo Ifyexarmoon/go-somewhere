@@ -1,227 +1,210 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-16be" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>~</title>
     <link href="https://fonts.cdnfonts.com/css/open-dyslexic" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            font-family: 'Open-Dyslexic', sans-serif;
-            color: #3B4252;
-            background: #8FBCBB;
-        }
+	body {
+		font-family: 'Open-Dyslexic', sans-serif;
+		color: #3B4252;
+		background: #8FBCBB;
+	}
 
-        /*Center everything*/
-        html,
-        body,
-        .container {
-            height: 100%;
-        }
+	html, body, .container {
+		height: 100%;
+	}
 
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 20px;
+	}
 
-        /*Split between image and everything else*/
-        .main_window {
-            display: flex;
-            flex-direction: row;
-            background-color: #ECEFF4;
-        }
+	.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #ECEFF4;
+	}
 
-        .image {
-            background-image: url(IMG_3483.JPG);
-            background-repeat: no-repeat;
-            background-size: 100%; //propotional resize;
-            min-width: 200px;
-        }
-
-        /*line up links horizontally*/
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            font-size: 14px;
-            text-align: center;
-            min-width: 500px;
-        }
-
-        .flex-item-left {
-            padding: 10px;
-            flex: 50%;
-        }
-
-        .flex-item-right {
-            padding: 10px;
-            flex: 50%;
-        }
-
-        /*fix title alignment*/
-        .title {
-            padding-top: 15px;
-            padding-left: 40px;
-        }
-
-        /* link */
-        a {
-            color: #5E81AC;
-            text-decoration: none;
-        }
-
-        /* mouse over link */
-        a:hover {
-            color: #81A1C1;
-        }
+	.flex-container > div {
+		width: 100px;
+		margin: 10px;
+		text-align: center;
+		line-height: 75px;
+		font-size: 30px;
+	}
 
 
-        .source {
-            font-size: 12px;
-            position: fixed;
-            bottom: 0;
-            left: 10px;
-        }
+	.subtitle {
+		font-weight: bold;
+	}
 
-        .bottom {
-            font-size: 12px;
-            position: fixed;
-            bottom: 0px;
-            right: 10px;
-        }
+	ul {
+		list-style-type: none;
+		text-align: left;
+		padding: 2px 20px;
+		line-height: 1.5;
+	}
 
-        #dark {
-            display: none;
-        }
+	/*Split between image and everything else*/
+	.main_window {
+		display: flex;
+		flex-direction: row;
+		background-color: #ECEFF4;
+	}
+	.image {
+		background-image: url(IMG_3483.JPG);
+		background-repeat: no-repeat;
+		background-size: 100%; //propotional resize;
+		min-width: 160px;
+	}
+	
+	/*fix title alignment*/
+	.title {
+		padding: 15px;
+		padding-left: 20px;
+	}
 
-        /* Responsive layout - removes image */
-        @media (max-width: 700px) {
-            .image {
-                display: none;
-            }
+	/*footer alignment*/
+	.source {
+		font-size: 12px;
+		position: fixed;
+		bottom: 0;
+		left: 10px;
+	}
 
-            .bottom {
-                display: none;
-            }
+	.bottom {
+		font-size: 12px;
+		position: fixed;
+		bottom: 0px;
+		right: 10px;
+	}
 
-        }
+	#dark {
+		display: none;
+	}
+/*theming stuff*/
 
-        /* Responsive layout - makes a one column-layout instead of three-column layout */
-        @media (max-width: 500px) {
-            .flex-container {
-                flex-direction: column;
-                min-width: 200px;
-                font-size: 18px;
-            }
+	/* link */
+	a {
+		color: #5E81AC;
+		text-decoration: none;
+	}
 
-            .image {
-                display: none;
-            }
+	/* mouse over link */
+	a:hover {
+		color: #81A1C1;
+	}
 
-            .title {
-                display: none;
-            }
-            
-            .source {
-            	display: none;
-            }
-            
-            .bottom {
-                display: none;
-            }
-        }
+/*Responsive Stuff*/
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                color: #BF616A;
-                background-color: #2E3440;
-            }
+	/* Responsive layout - removes image */
+	@media (max-width: 675px) {
+		.image {
+			display: none;
+		}
 
-            .main_window {
-                color: #D08770;
-                background-color: #3B4252;
-            }
+		.bottom {
+			display: none;
+		}
 
-            .title {
-                color: #BF616A;
-            }
+	}
+	@media (prefers-color-scheme: dark) {
+		body {
+			color: #BF616A;
+			background-color: #2E3440;
+		}
 
-            .image {
-                background-image: url(IMG_3482.JPG);
-            }
+		.main_window, .flex-container {
+			color: #D08770;
+			background-color: #3B4252;
+		}
 
-            #light {
-                display: none;
-            }
-            
-            #dark {
-            	display: block;
-            }
-            
-            /* link */
-            a {
-                color: #EBCB8B;
-            }
+		.title {
+			color: #BF616A;
+		}
 
-            a:hover {
-                color: #81A1C1;
-            }
-        }
-    </style>
+		.image {
+			background-image: url(IMG_3482.JPG);
+		}
+
+		#light {
+			display: none;
+		}
+		
+		#dark {
+			display: block;
+		}
+		
+		/* link */
+		a {
+			color: #EBCB8B;
+		}
+
+		a:hover {
+			color: #81A1C1;
+		}
+	}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="main_window">
-            <div class="image" class="flex-item-left"></div>
-            <div class="main_content">
-                <div class="title">
-                    <h2>go-somewhere</h2>
-                    <div id="date">
-                        <script type="text/javascript">
-                            function doDate() {
-                                var str = "";
-                                var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-                                var clock = new Date();
-                                var now = new Date();
+	<div class="container">
+		<div class="main_window">
+			<div class="image" class="flex-item-left"></div>
+			<div class="main_content">
+				<div class="title">
+					<h2 style="font-style: italic;">go-somewhere</h2>
+					<div id="date">
+						<script type="text/javascript">
+							function doDate() {
+								var str = "";
+								var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+								var clock = new Date();
+								var now = new Date();
 
-                                str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) + ":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
-                                document.getElementById("date").innerHTML = str;
-                            }
-                            setInterval(doDate, 1000);
-                            doDate();
-                        </script>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <div class="flex-item-right">
-                        <h3>media</h3>
-                        <p><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></p>
-                        <p><a href="https://9animeto.io/user/continue-watching">9anime</a></p>
-                        <p><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></p>
-                    </div>
-                    <div class="flex-item-right">
-                        <h3>social</h3>
-                        <p><a href="https://www.tumblr.com/dashboard">Tumblr</a></p>
-                        <p><a href="https://raddle.me/">Raddle</a></p>
-                        <p><a href="https://discord.com/channels/@me">Discord</a></p>
-                    </div>
-                    <div class="flex-item-right">
-                        <h3>other</h3>
-                        <p><a href="https://jisho.org/">Jisho</a></p>
-                        <p><a href="https://www.wikipedia.org/">Wikipedia</a></p>
-                        <p><a href="https://www.spl.org">Library</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="source">
+								str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) + ":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+								document.getElementById("date").innerHTML = str;
+							}
+							setInterval(doDate, 1000);
+							doDate();
+						</script>
+					</div>
+				</div>
+
+				<div class="flex-container">
+					<ul>
+						<li class="subtitle">frequent</li>
+						<li><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></li>
+						<li><a href="https://www.duolingo.com/learn">Duolingo</a></li>
+						<li><a href="https://www.newsblur.com/">NewsBlur</a></li>
+					</ul>
+					<ul>
+						<li class="subtitle">media</li>
+						<li><a href="https://9animeto.io/user/continue-watching">Anime</a></li>
+						<li><a href="https://www.netflix.com/browse">Netflix</a></li>
+						<li><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></li>
+					</ul>
+					<ul>
+						<li class="subtitle">social</li>
+						<li><a href="https://www.tumblr.com/dashboard">Tumblr</a></li>
+						<li><a href="https://raddle.me/">Raddle</a></li>
+						<li><a href="https://mastodon.social/home">Mastodon</a></li>
+					</ul>
+					<ul>
+						<li class="subtitle">other</li>
+						<li><a href="https://jisho.org/">Jisho</a></li>
+						<li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+						<li><a href="https://www.spl.org">Library</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	    <div class="source">
         <p><a href="https://github.com/Ifyexarmoon/go-somewhere">Github Repo</a></p>
     </div>
     <div class="bottom">
@@ -229,5 +212,4 @@
         <p id="dark"><a href="https://www.pixiv.net/en/artworks/98830499">Art by モ誰　on Pixiv</a></p>
     </div>
 </body>
-
 </html>
