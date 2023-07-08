@@ -57,17 +57,26 @@
 		flex-direction: row;
 		background-color: #ECEFF4;
 	}
+	
 	.image {
 		background-image: url(IMG_3483.JPG);
 		background-repeat: no-repeat;
 		background-size: 100%; //propotional resize;
-		min-width: 160px;
+		min-width: 200px;
+	}
+	
+	.main_content {
+		padding: 20px
 	}
 	
 	/*fix title alignment*/
-	.title {
-		padding: 15px;
+	.top {
+		padding-bottom: 10px;
 		padding-left: 20px;
+	}
+	
+	.title {
+		padding-bottom: 10px;
 	}
 
 	/*footer alignment*/
@@ -157,8 +166,8 @@
 		<div class="main_window">
 			<div class="image" class="flex-item-left"></div>
 			<div class="main_content">
-				<div class="title">
-					<h2 style="font-style: italic;">go-somewhere</h2>
+				<div class="top">
+					<h2 class="title" style="font-style: italic;">go-somewhere</h2>
 					<div id="date">
 						<script type="text/javascript">
 							function doDate() {
@@ -177,15 +186,9 @@
 				</div>
 				<div class="flex-container">
 					<ul>
-						<li class="subtitle">frequent</li>
-						<li><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></li>
-						<li><a href="https://www.duolingo.com/learn">Duolingo</a></li>
-						<li><a href="https://www.newsblur.com/">NewsBlur</a></li>
-					</ul>
-					<ul>
 						<li class="subtitle">media</li>
-						<li><a href="https://9animeto.io/user/continue-watching">Anime</a></li>
-						<li><a href="https://www.netflix.com/browse">Netflix</a></li>
+						<li><a href="https://myanimelist.net/profile/Ifyexarmoon">MAL</a></li>
+						<li><a href="https://9animeto.io/user/continue-watching">9anime</a></li>
 						<li><a href="https://www.youtube.com/feed/subscriptions">Youtube</a></li>
 					</ul>
 					<ul>
@@ -195,10 +198,16 @@
 						<li><a href="https://mastodon.social/home">Mastodon</a></li>
 					</ul>
 					<ul>
-						<li class="subtitle">other</li>
+						<li class="subtitle">japanese</li>
+						<li><a href="https://app.memrise.com/dashboard/scenarios">Memrise</a></li>
+						<li><a href="https://www.duolingo.com/learn">Duolingo</a></li>
+						<li><a href="https://www.wanikani.com">WaniKani</a></li>
+					</ul>
+					<ul>
+						<li class="subtitle">tools</li>
 						<li><a href="https://jisho.org/">Jisho</a></li>
 						<li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
-						<li><a href="https://www.spl.org">Library</a></li>
+						<li><a href="https://www.newsblur.com/">NewsBlur</a></li>
 					</ul>
 				</div>
 			</div>
